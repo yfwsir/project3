@@ -23,6 +23,15 @@ $('.appscan').on('mouseenter',function(){
 $('.appscan').on('mouseleave',function(){
     $('.appscan').css('display','none');
 })
+$('.header_right li').eq(3).on('mouseenter',function(){
+    $('.header_seach').css('display','block');
+})
+$('body').click(function(){
+    $('.header_seach').css('display','none');
+})
+$('.header_seach').click(function(event){
+    event.stopPropagation();
+})
 // =====================banner导航菜单显示隐藏======================
 $('.list_first').on('mouseenter',function(){
     $('.wm').css('display','block');

@@ -114,6 +114,7 @@ a:hover{
     line-height: 44px;
     background: white;
     padding-left: 10px;
+    display: none;
 }
 .header_seach input{
     border: none;
