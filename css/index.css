@@ -24,6 +24,7 @@ a:hover{
     width: 100%;
     height: 44px;
     background: #0092d8;
+    position: relative;
 }
 .header ul li{
     float: left;
@@ -81,6 +82,48 @@ a:hover{
 .header ol span{
     color: white;
 }
+.header .car_login{
+    text-align: center;
+    width: 360px;
+    padding: 20px 0;
+    line-height: 44px;
+    background: white;
+    position: absolute;
+    right: 86px;
+    top: 44px;
+    z-index: 5;
+    font-size: 12px;
+    display: none;
+}
+.header .car_login a{
+    color: #0092d8;
+}
+.header .appscan{
+    position: absolute;
+    top: 44px;
+    right: 86px;
+    z-index: 4;
+    display: none;
+}
+.header_seach{
+    width: 240px;
+    position: absolute;
+    top: 0;
+    right: 216px;
+    height: 44px;
+    line-height: 44px;
+    background: white;
+    padding-left: 10px;
+}
+.header_seach input{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+.header_seach .icon-serch{
+    cursor: pointer;
+    color: #666;
+}
 /* ================公告样式================ */
 .announce{
     text-align: center;
@@ -90,9 +133,123 @@ a:hover{
     line-height: 20px;
 }
 /* ===================banner样式================= */
+.banner{
+    position: relative;
+}
 .banner img{
     display: block;
     width: 100%;
+}
+.index_product_list{
+    width: 220px;
+    height: 448px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px 0;
+}
+.index_product_list i{
+    font-size: 12px;
+    color: white;
+}
+.index_product_list .list_first li{
+    height: 56px;
+    line-height: 56px;
+    padding-left: 20px;
+}
+.index_product_list .list_first li:hover{
+    background: black;
+}
+.index_product_list .list_name{
+    color: white;
+    line-height: 56px;
+    margin-right: 10px;
+    margin-left: 22px;
+}
+.index_product_list .list_dec{
+    color: #f0f0f0;
+    line-height: 56px;
+    opacity: 0.5;
+}
+.index_product_list .wm{
+    width: 658px;
+    height: 478px;
+    background: white;
+    border: solid 1px #ccc;
+    position: absolute;
+    top: 0;
+    left: 220px;
+    overflow: hidden;
+    display: none;
+}
+.index_product_list .wm div{
+    width: 218px;
+    float: left;
+}
+.index_product_list .wm_left li{
+    height: 56px;
+    padding-left: 20px;
+}
+.index_product_list .wm_center li{
+    height: 119px;
+    border: solid 1px #eee;
+}
+.index_product_list .wm_left .wm_left_img{
+    display: block;
+    width: 32px;
+    height: 32px;
+    float: left;
+    position: relative;
+    top: 13px;
+    margin-right: 10px;
+}
+.index_product_list .wm_left .wm_left_name{
+    display: block;
+    float: left;
+    line-height: 56px;
+}
+.index_product_list .wm_center .wm_center_img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    float: left;
+    position: relative;
+    top: 13px;
+    margin-right: 10px;
+    float: left;
+}
+.index_product_list .wm_center .wm_center_name{
+    display: block;
+    width: 110px;
+    margin-top: 18px;
+    margin-bottom: 2px;
+    line-height: 16px;
+    float: left;
+}
+.wm_right{
+    text-align: center;
+}
+.wm_right li{
+    height: 222px;
+    border-bottom: solid 1px #eee;
+}
+.wm_right .wm_right_img{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-left: 48px;
+    margin-top: 20px;
+}
+.wm_right_p1{
+    margin-top: 22px;
+    font-size: 14px;
+}
+.wm_right_p2{
+    color: #999;
+}
+.wm_right li:hover p{
+    color: red;
 }
 /* ================列表样式============== */
 ul.list{
