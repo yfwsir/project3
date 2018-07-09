@@ -1,0 +1,28 @@
+html,body,ul,li,ol,h1,h2,h3,img,form,p,input,textarea,a,span{
+		padding:0;
+		margin:0;
+}
+body{
+	font-size: 12px;
+	overflow-x: hidden;
+}
+b,i,em,strong{
+	font-style: normal;
+	font-weight: normal;
+}
+ul li,ol li{
+	list-style:none;
+}
+img{
+	border: none;
+}
+a{
+	text-decoration:none;
+	color: #666;
+}
+a:hover{
+	color: red;
+}
+.clearfix:after{
+	content:"";font-size:0;height:0;overflow: hidden;visibility: hidden;display:block;clear: both;
+}

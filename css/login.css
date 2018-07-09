@@ -1,0 +1,143 @@
+/* =============login 头部注释================== */
+.header{
+    min-width: 1200px;
+    height: 44px;
+    background: #0092d8;
+}
+.header .logo a{
+    display: block;
+    width: 120px;
+    height: 44px;
+    cursor: pointer;
+    background: url(../images/index_sprite.png) no-repeat 0 -245px;
+}
+
+/* ====================主体内容注释======================= */
+.main{
+    width: 1190px;
+    height: 620px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-bottom: solid 1px #ccc;
+}
+.main .main_left{
+    width: 560px;
+    height: 485px;
+    position: absolute;
+    top: 66px;
+    right: 520px;
+}
+.main img{
+    width: 485px;
+    height: 485px;
+}
+.main .main_right{
+    float: right;
+    width: 300px;
+    height: 412px;
+    border: solid 1px #cccccc;
+    margin: 66px 100px 0 0 ;
+    padding: 29px 38px 38px;
+}
+.main .main_right p{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #666;
+}
+.main .main_right .main_connect .iconfont{
+    font-size: 50px;
+    color: green;
+    margin-right: 24px;
+}
+.main .main_right .main_connect .icon-qqlogin{
+    color:#0092d8;
+}
+.main .main_right .main_connect{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.main .main_right .main_connect li{
+    float: left; 
+    margin-bottom: 20px;
+}
+.main .main_right input{
+    width: 300px;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: block;
+    border: solid 1px #ccc;
+}
+.main .main_right [type="submit"]{
+    background: #0092d8;
+    border: 0;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin: 17px 0 17px 0;
+}
+.main .main_right .login_phone span{
+    margin: 0 15px;
+}
+.main .main_right .login_phone .find_pwd{
+    float: right;
+}
+
+/* ===================注册页样式===================== */
+.login{
+    display: block;
+}
+.sign_in{
+    display: none;
+}
+.main .main_right .sign_in{
+    color: #999;
+}
+.main .main_right .checkbox{
+    width: 14px;
+    height: 14px;
+    display: inline;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.main .main_right .sign_in .input_phone{
+    width: 198px;
+    float: left;
+}
+.main .main_right .sign_in .btn_phone{
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 38px;
+    text-align: center;
+    background: white;
+    border: solid 1px #ccc;
+    margin-top: 10px;
+    border-left: 0;
+}
+.main .main_right .sign_in span{
+    display: block;
+}
+.main .main_right .sign_in .haveusername{
+    float: right;
+    color: #0092d8;
+}
+.main .main_right .sign_in .haveusername:hover{
+    color: red;
+}
+.main .main_right .sign_in .sign_rule{
+    color: #0092d8;
+}
+/* =====================底部注释===================== */
+.footer{
+    margin: 0 auto 30px;
+    padding-top: 15px;
+    text-align: center;
+    color: #999;
+}

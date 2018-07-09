@@ -1,0 +1,262 @@
+/* ================通用样式================ */
+
+.main{
+    width: 1200px;
+    margin: 0 auto;
+}
+html,body{
+    width: 100%;
+    font-size: 14px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #333;
+}
+a:hover{
+    color: red;
+}
+/* ===================头部样式=================== */
+.header{
+    width: 100%;
+    height: 44px;
+    background: #0092d8;
+}
+.header ul li{
+    float: left;
+    height: 44px;
+}
+.header .header_left li a:hover{
+    color: white;
+}
+.header ul li:nth-of-type(1) a{
+    display: block;
+    width: 120px;
+    height: 100%;
+    background: url(../images/index_sprite.png) no-repeat 0 -245px;
+}
+.header ul li:nth-of-type(2) a{
+    display: block;
+    width: 84px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #a3c3e6;
+}
+.header ul li:nth-of-type(3) a,.header ul li:nth-of-type(4) a,.header ul li:nth-of-type(5) a{
+    display: block;
+    width: 108px;
+    line-height: 44px;
+    font-size: 12px;
+    color: #a3c3e6;
+}
+
+.header ol li{
+    float: right;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+}
+.header ol li:nth-of-type(1){
+    width: 86px;
+}
+.header ol li:nth-of-type(2){
+    width: 65px;
+}
+.header ol li:nth-of-type(3){
+    width: 65px;
+}
+.header ol li:nth-of-type(4){
+    width: 75px;
+}
+.header .header_right li:hover{
+    background: #333;
+}
+.header ol .iconfont{
+    color: white;
+    line-height: 44px;
+}
+.header ol span{
+    color: white;
+}
+/* ================公告样式================ */
+.announce{
+    text-align: center;
+    background: rgb(0, 59, 102);
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+}
+/* ===================banner样式================= */
+.banner img{
+    display: block;
+    width: 100%;
+}
+/* ================列表样式============== */
+ul.list{
+    overflow: hidden;
+    border-left: solid 1px #ccc;
+}
+ul.list li{
+    width: 298px;
+    height: 200px;
+    border-right: solid #ccc 1px;
+    border-bottom: solid #ccc 1px;
+    float: left;
+}
+ul.list li img{
+    display: block;
+    margin: 15px auto 5px;
+}
+
+/*================ 二级标题的样式 ===============*/
+.title{
+    text-align: center;
+}
+.title h2{
+    font-size: 38px;
+    margin: 80px 0 20px;
+}
+.title p{
+    white-space: pre;
+    margin-bottom: 40px;
+}
+.title a{
+    display: block;
+    margin-bottom: 40px;
+}
+
+/* ===============产品1的样式================= */
+.product .name{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.product .price{
+    position: absolute;
+    left: 35px;
+    bottom: 90px;
+}
+ul.product_1{
+    height: 682px;
+    overflow: hidden;
+    border-left: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+}
+ul.product_1 li{
+    float: left;
+    width: 298px;
+    height: 340px;
+    border-right: solid 1px #ccc;
+    border-top: solid 1px #ccc;
+    text-align: center;
+}
+ul.product_1 li:first-of-type{
+    width: 600px;
+    height: 680px;
+}
+ul.product_1 li img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 35px auto 40px;
+}
+ul.product_1 li:first-of-type img{
+    width: 500px;
+    height: 590px;
+    margin: 35px auto 10px;
+}
+
+/* ==============产品2的样式============== */
+ul.product_2{
+    height: 682px;
+    border-left: solid 1px #ccc;
+}
+ul.product_2 li{
+    float: right;
+    width: 299px;
+    height: 340px;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+}
+ul.product_2 li:nth-of-type(1){
+    width: 597px;
+    height: 680px;
+}
+ul.product_2 li:nth-of-type(2){
+    width: 600px;
+    height: 340px;
+    position: relative;
+}
+ul.product_2 li img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 35px auto 40px;
+}
+ul.product_2 li:nth-of-type(1) img{
+    width: 500px;
+    height: 590px;
+    margin: 35px auto 10px;
+}
+ul.product_2 li:nth-of-type(2) img{
+    width: 540px;
+    height: 280px;
+}
+
+/* ================会员专区样式=============== */
+ul.join{
+    height: 420px;
+    border-top:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+    border-left:solid 1px #ccc;
+}
+ul.join li{
+    float: left;
+    width: 299px;
+    height: 420px;
+    border-right: solid 1px #ccc;
+}
+ul.join li a img{
+    display: block;
+    margin: 30px auto 10px;
+}
+ul.join li .btn{
+    display: block;
+    width: 120px;
+    line-height: 40px;
+    border: solid 1px #ccc;
+    margin:0 auto;
+    text-align: center;
+}
+
+/* ===========底部样式================= */
+.footer{
+    width: 100%;
+    height: 42px;
+    border-bottom: solid 1px #ccc ;
+    border-top: solid 1px #ccc ;
+    margin-top: 80px;
+}
+.footer .col{
+    float: left;
+    width: 150px;
+    line-height: 42px;
+}
+
+/* ===================备案样式============== */
+.copyright p{
+    font-size: 12px;
+    line-height: 50px;
+}
+.copyright img{
+    position: relative;
+    top: 5px;
+}
+
+ul.list li img,.product li img,.join li img{
+    position: relative;
+}
