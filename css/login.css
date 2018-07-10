@@ -35,12 +35,11 @@
 .main .main_right{
     float: right;
     width: 300px;
-    height: 412px;
     border: solid 1px #cccccc;
     margin: 66px 100px 0 0 ;
     padding: 29px 38px 38px;
 }
-.main .main_right p{
+.main_right p{
     font-size: 20px;
     margin-bottom: 15px;
     color: #666;
@@ -71,7 +70,7 @@
     display: block;
     border: solid 1px #ccc;
 }
-.main .main_right [type="submit"]{
+.main .main_right .btn_login,.btn_sign{
     background: #0092d8;
     border: 0;
     color: white;
@@ -100,15 +99,22 @@
 .main .main_right .checkbox{
     width: 14px;
     height: 14px;
-    display: inline;
+    display: inline-block;
     position: relative;
     top: 3px;
     margin-right: 5px;
     cursor: pointer;
 }
+.phone{
+    overflow: hidden;
+}
+.error{
+    color: red;
+}
 .main .main_right .sign_in .input_phone{
     width: 198px;
     float: left;
+    margin-bottom: 5px;
 }
 .main .main_right .sign_in .btn_phone{
     display: block;
@@ -133,6 +139,10 @@
 }
 .main .main_right .sign_in .sign_rule{
     color: #0092d8;
+}
+.main_right .phone_tip{
+    color: red;
+    font-size: 12px;
 }
 /* =====================底部注释===================== */
 .footer{

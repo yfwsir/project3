@@ -34,6 +34,9 @@ $('body').click(function(){
 $('.header_seach').click(function(event){
     event.stopPropagation();
 })
+$('.toLogin').click(function(){
+    window.location.href = 'html/login.html' ;    
+})
 
 //#endregion
 //#region banner上商品列表显示隐藏 
