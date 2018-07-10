@@ -7,24 +7,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/detial.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_735572_ehkwx809w2k.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_735572_w1te23d98qi.css">
 </head>
 <body>
-    <div class="header">
-        <ul class="header_left">
-            <li><a href="#"></a></li>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">商家入驻</a></li>
-            <li><a href="#">新品频道</a></li>
-            <li><a href="#">商家入驻</a></li>
-        </ul>
-        <ol class="header_right">
-            <li><a href="#"><i class="iconfont icon-my"></i><span>登录</span></a></li>
-            <li><a href="#"><i class="iconfont icon-buycar"></i></a></li>
-            <li><a href="#"><i class="iconfont icon-phone"></i></a></li>
-            <li><a href="#"><i class="iconfont icon-serch"></i></a></li>
-        </ol>
-    </div>
+        <div class="header">
+            <ul class="header_left">
+                <li><a href="#"></a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">新品频道</a></li>
+                <li><a href="#">商家入驻</a></li>
+            </ul>
+            <ol class="header_right">
+                <li><a href="#"><i class="iconfont icon-my"></i><span>登录</span></a></li>
+                <li><a href="#"><i class="iconfont icon-buycar"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-phone"></i></a></li>
+                <li><a href="#"><i class="iconfont icon-serch"></i></a></li>
+            </ol>
+            <div class="car_login">
+                <p>立即<a href="#">登录</a>，查看购物车商品</p>
+            </div>
+            <div class="appscan">
+                <img src="../images/erweima.png" alt="">
+            </div>
+            <div class="header_seach">
+                <i class="iconfont icon-serch"></i>
+                <input type="text" placeholder="空调特惠">
+            </div>
+        </div>
     <div class="announce">
         <p>【通知】1、美的商城为美的集团官方渠道，请勿相信任何刷单信息。2、新疆部分区域无法快递正常发货，恢复时间待定，给您带来不便，敬请见谅。</p>
     </div>
@@ -38,14 +48,16 @@
         <div class="product_wrap clearfix">
             <div class="product_left">
                 <div class="showImg">
+                    <!-- <img src="../images/detial/xiyiji2.webp"> -->
                     <img src="../images/detial/xiyiji1.webp">
+                    <div class="showcase"></div>
+                </div>
+                <div class="showBigImg">
+                    <img src="../images/detial/xiyiji1.webp" alt="">
                 </div>
                 <ul class="product_list">
-                    <li><img src="../images/detial/xiyiji1small.webp" alt=""></li>
-                    <li><img src="../images/detial/xiyiji1small.webp" alt=""></li>
-                    <li><img src="../images/detial/xiyiji1small.webp" alt=""></li>
-                    <li><img src="../images/detial/xiyiji1small.webp" alt=""></li>
-                    <li><img src="../images/detial/xiyiji1small.webp" alt=""></li>
+                    <li class="product_list_checked"><img src="../images/detial/xiyiji1small.webp"></li>
+                    <li><img src="../images/detial/xiyiji2small.webp" alt=""></li>
                 </ul>
                 <div class="share">
                     <div class="share_left">
@@ -105,12 +117,17 @@
                     </div>
                     <div class="sku_num">
                         <h3>数量</h3>
-                        
+                        <div class="sku_num_total">
+                            <i class="iconfont icon-dec"></i>
+                            <input type="text" value="1">
+                            <i class="iconfont icon-add"></i>
+                            <span></span>
+                        </div>
                     </div>
-                    <div class="sku_address">
+                    <!-- <div class="sku_address">
                         <h3>配送至</h3>
                         
-                    </div>
+                    </div> -->
                     <div class="sku_supp">
                         <h3>供货商</h3>
                         <span class="supp">美的洗衣机官方旗舰店</span>
@@ -202,10 +219,23 @@
         
     </div>
     <ul class="floating">
-        <li><a href=""><i></i></a></li>
-        <li><a href=""><i></i></a></li>
-        <li><a href=""><i></i></a></li>
-        <li><a href=""><i></i></a></li>
+        <li>
+            <a href="#" class="icon_dis"><i class="iconfont icon-serverpeople"></i><p>客服</p></a>
+            <a href="#" class="icon_hide">在线客服</a>
+        </li>
+        <li>
+            <a href="#" class="icon_hide">技术支持</a>
+            <a href="#" class="icon_dis"><i class="iconfont icon-server"></i><p>服务</p></a>
+        </li>
+        <li>
+            <a href="#"><i class="iconfont icon-public"></i><p>公众号</p></a>
+        </li>
+        <li>
+            <a href="#" class="icon_dis"><i class="iconfont icon-totop"></i><p>回到顶部</p></a>
+            <a href="#" class="icon_hide">返回顶部</a>
+        </li>
     </ul>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/detial.js"></script>
 </body>
 </html>

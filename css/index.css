@@ -137,9 +137,61 @@ a:hover{
 .banner{
     position: relative;
 }
-.banner img{
-    display: block;
+
+.swiper{
     width: 100%;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+}
+.swiper .imgbox{
+    width: 6000px;
+    height: 480px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.swiper .imgbox img{
+    display: block;
+    width: 1200px;
+    float: left;
+}
+.swiper .uubox{
+    position: absolute;
+    bottom: 40px;
+    right: 440px;
+}
+.swiper .uubox li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: white;
+    opacity: 0.3;
+    border: solid 1px white;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.swiper .uubox li.checked{
+    opacity: 1;
+}
+.swiper .toLeft{
+    width: 28px;
+    height: 46px;
+    background: url(../images/pre.png) no-repeat;
+    position: absolute;
+    top: 217px;
+    left: 220px;
+    cursor: pointer;
+}
+.swiper .toRight{
+    width: 28px;
+    height: 46px;
+    background: url(../images/pre.png) no-repeat -50px 0;
+    position: absolute;
+    top: 217px;
+    right: 0px;
+    cursor: pointer;
 }
 .index_product_list{
     width: 220px;

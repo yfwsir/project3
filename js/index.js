@@ -1,4 +1,6 @@
-// ===================头部显示隐藏===============
+
+//#region 头部icon移上的显示隐藏 
+
 $('.header_right li').eq(1).on('mouseenter',function(){
     $('.car_login').css('display','block');
 })
@@ -32,7 +34,10 @@ $('body').click(function(){
 $('.header_seach').click(function(event){
     event.stopPropagation();
 })
-// =====================banner导航菜单显示隐藏======================
+
+//#endregion
+//#region banner上商品列表显示隐藏 
+
 $('.list_first').on('mouseenter',function(){
     $('.wm').css('display','block');
 })
@@ -45,7 +50,15 @@ $('.list_first').on('mouseleave',function(){
 $('.wm').on('mouseleave',function(){
     $('.wm').css('display','none');
 })
-// =================鼠标经过图片效果========================
+
+//#endregion
+$('.uubox li').on('click',function(){
+    $(this).addClass('checked').siblings().removeClass('checked');
+    $('.imgbox').animate({left:-1200 * $(this).index()},500);
+})
+
+//#region 鼠标移上图片向上移动 
+
 $('ul.list li img').on('mouseenter',function(){
     $(this).animate({top:-5},200);
 })
@@ -65,3 +78,5 @@ $('.join li img').on('mouseenter',function(){
 $('.join li img').on('mouseleave',function(){
     $(this).animate({top:0},200);
 })
+
+//#endregion
