@@ -53,6 +53,27 @@ $btn_sign.onclick = function(){
     $btn_phone.onclick();
     $inp_pwd.onchange();
     $inp_pwd2.onchange();
+    if(sign_phone.test($inp_phone.value)&&sign_pwd.test($inp_pwd.value)&&$inp_pwd.value==$inp_pwd2.value){
+        var xhr = new XMLHttpRequest()
+        xhr.open('post','../php/add.php',true)
+        var params = {
+            username:$inp_phone.value,
+            password:$inp_pwd.value
+        }
+        params = JSON.stringify(params)
+        xhr.send(params)
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState ==4 && xhr.status == 200){
+                var json = JSON.parse(xhr.responseText)
+                if(json.code == 0){
+                    console.log(json)
+                    window.location.href = '../html/login.html' ;
+                }else{
+                    alert(json.msg);
+                }
+            }
+        }
+    }
 }
 
 //#endregion
