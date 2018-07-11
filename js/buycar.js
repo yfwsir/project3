@@ -1,12 +1,16 @@
 var showList = (function(){
     var shopList = localStorage.shopList || '[]';
     shopList = JSON.parse(shopList);
-    
+    var sum =0;
     return {
         init(){
             this.insertData(shopList) ;
             this.events();
-            $('.total_price').html($('.item_total').html())
+            $('.item_total').each(function(index,item){
+                sum += Number($(item).html())
+                return sum
+            })
+            $('.total_price').html(sum)
         },
         insertData(shopList){
             str = '' ;
@@ -23,7 +27,7 @@ var showList = (function(){
                 <p>${shopList[i].color}</p>
                 <p>${shopList[i].weight}</p>
             </li>
-            <li>
+            <li class="priceone">
                 ${shopList[i].price}
             </li>
             <li>
@@ -40,31 +44,46 @@ var showList = (function(){
                 str += div ;
             }
                 
-                $('.car_item_box').html(div);
+                $('.car_item_box').html(str);
         },
         events(){
-            var $num = $('.buynum')
-            var $add = $('.icon-add')
-            var $dec = $('.icon-dec')
-            $add.click(function(){
-                var value = $num.val();
+            $('.car_item_box').on('click','.icon-add',function(){
+                var value = Number($(this).prev('.buynum').val());
                 value++
-                $num.val(value)
-                var item_price = Number($num.val()) * shopList[0].price
-                $('.item_total').html(item_price)
-                $('.total_price').html($('.item_total').html())
+                // console.log(value)
+                $(this).prev('.buynum').val(value)
+                var priceone = $(this).closest('li').prev('.priceone').html();
+                $(this).closest('li').next('.item_total').html(value * priceone)
+                // console.log($('.item_total').html())
+                sum = 0 ;
+                $('.item_total').each(function(index,item){
+                    sum += Number($(item).html())
+                    return sum
+                })
+                $('.total_price').html(sum)
             })
-            $dec.click(function(){
-                var value = $num.val();
+         
+            $('.car_item_box').on('click','.icon-dec',function(){
+                var value = Number($(this).next('.buynum').val());
+                
                 if(value<=1){
-                    $num.val('1')
+                    $(this).next('.buynum').val(1)
                 }else{
-                    value--
-                    $num.val(value)
-                }
-                var item_price = Number($num.val()) * shopList[0].price
-                $('.item_total').html(item_price)
-                $('.total_price').html($('.item_total').html())  
+                    value = value - 1 ;
+                    $(this).next('.buynum').val(value)
+                }   
+                // console.log(value)
+                
+                var priceone = Number($(this).closest('li').prev('.priceone').html());
+                // console.log(priceone)
+                $(this).closest('li').next('.item_total').html(value * priceone)
+
+                sum = 0 ;
+                $('.item_total').each(function(index,item){
+                    sum += Number($(item).html())
+                    return sum
+                })
+                $('.total_price').html(sum)
             })
             $('.car_item_box').on('click','.btn_del',function(){
                 var ul = $(this).closest('ul');

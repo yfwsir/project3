@@ -96,14 +96,17 @@ var showData = (function(){
             $.get('../json/carlist.json',this.insertData, "json")
         },
         insertData(json){
-            var div = `<h1 class="product_name" id="${json[0].id}">${json[0].name}</h1>
-            <h5>${json[0].int}</h5>
+            var url = window.location.search ;
+            var id = url.split('=')[1] ;
+            console.log(id)
+            var div = `<h1 class="product_name" id="${json[id].id}">${json[id].name}</h1>
+            <h5>${json[id].int}</h5>
             <div class="act">
                 <span><i class="iconfont icon-time"></i>距活动结束：05天09小时38分37秒</span>
             </div>
             <div class="price">
-                <span class="new_price">${json[0].price}</span>
-                <del class="old_price">￥<span>${json[0].oldprice}</span></del>
+                <span class="new_price">${json[id].price}</span>
+                <del class="old_price">￥<span>${json[id].oldprice}</span></del>
                 <span class="act_name">清凉节</span>
             </div>   
             <div class="product_desc">
@@ -134,20 +137,22 @@ var showData = (function(){
                     <h3>颜色</h3>
                     <div class="color">
                         <img src="../images/detial/skucolor.webp" alt="">
-                        <span class="product_color">${json[0].color}</span>
+                        <span class="product_color">${json[id].color}</span>
                     </div>
                 </div>
                 <div class="sku_spec">
                     <h3>规格</h3>
-                    <span class="product_weight">${json[0].weight}</span>
+                    <span class="product_weight">${json[id].weight}</span>
                 </div>
             </div>`
             $('.product_right_insert').html(div);
         },
         addshop(obj){
-            
-            var add = true ;
+            var shopList = localStorage.shopList || '[]' ;
+            shopList = JSON.parse(shopList);
+            var add = true;
             for(var i = 0;i<shopList.length;i++){
+                // add = true ;
                 if(obj.id == shopList[i].id){
                     add = false ;
                     shopList[i].count += obj.count;
@@ -157,7 +162,9 @@ var showData = (function(){
             if(add){
                 shopList.push(obj);
             }
-            localStorage.shopList=JSON.stringify(shopList);
+            console.log(shopList)
+            localStorage.shopList= JSON.stringify(shopList);
+            console.log(shopList)
         },
         events(){
             var _this = this ;

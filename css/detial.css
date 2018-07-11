@@ -415,6 +415,7 @@ a:hover{
     line-height: 40px;
     text-align: center;
     margin-right: 10px;
+    cursor: pointer;
 }
 .product_right .buy{
     display: inline-block;
