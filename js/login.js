@@ -67,7 +67,8 @@ $btn_sign.onclick = function(){
                 var json = JSON.parse(xhr.responseText)
                 if(json.code == 0){
                     console.log(json)
-                    window.location.href = '../html/login.html' ;
+                    alert(json.msg);
+                    // window.location.href = '../index.html' ;
                 }else{
                     alert(json.msg);
                 }
@@ -115,7 +116,8 @@ $btn_login.onclick = function(){
             if(xhr.readyState ==4 && xhr.status == 200){
                 var json = JSON.parse(xhr.responseText)
                 if(json.code == 0){
-                    console.log(json)
+                    // console.log(json.data.username)
+                    window.sessionStorage.setItem("username", json.data.username);
                     window.location.href = '../index.html' ;
                 }else{
                     alert(json.msg);

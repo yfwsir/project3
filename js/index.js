@@ -1,12 +1,26 @@
 
+//#region 判断是否登录，登录了显示登录的用户名 
+
+var username = window.sessionStorage.username;
+if(username){
+    $('.toLogin').html('');
+    $('.toLogin').html(username);
+}else {
+    $('.toLogin').html('');
+    $('.toLogin').html('登录');
+    $('.header_right li').eq(1).on('mouseenter',function(){
+        $('.car_login').css('display','block');
+    })
+    $('.header_right li').eq(1).on('mouseleave',function(){
+        $('.car_login').css('display','none');
+    })
+}
+
+//#endregion
+
 //#region 头部icon移上的显示隐藏 
 
-$('.header_right li').eq(1).on('mouseenter',function(){
-    $('.car_login').css('display','block');
-})
-$('.header_right li').eq(1).on('mouseleave',function(){
-    $('.car_login').css('display','none');
-})
+
 $('.car_login').on('mouseenter',function(){
     $('.car_login').css('display','block');
 })
