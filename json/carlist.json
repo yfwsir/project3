@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 1,
+        "img" : "../images/buycar/car_list.jpg",
+        "name" : "滚筒洗衣机 9KG变频 除菌洗 大容量 智能操控 MG90V130WDX",
+        "int" : "触摸屏设计，操作简单；M-smart智能家居系统，WIFI控制；变频电机，节能静音；除菌洗；银灰色门圈，时尚大气；I-time智能时间控制",
+        "color" : "白色",
+        "weight" : "9KG",
+        "price" : 1999.00,
+        "oldprice" : 2299.00
+    },
+    {
+        "id" : 2,
+        "img" : "../images/buycar/car_list.jpg",
+        "name" : "波轮洗衣机 6KG 除菌洗 智能操控 MB60V130WDX",
+        "int" : "操作简单；M-smart智能家居系统，WIFI控制；变频电机，节能静音；除菌洗；银灰色门圈，时尚大气；I-time智能时间控制",
+        "spec" : "金色 6KG",
+        "price" : 799.00,
+        "oldprice" : 999.00
+    }
+]
