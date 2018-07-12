@@ -4,12 +4,13 @@ var showData = (function(){
         shopList = JSON.parse(shopList);
     return {
         init(){
+            this.check();
             this.header();
             this.expandImg();
             this.events();
             this.getJson();
         },
-        header(){
+        check(){
             var username = window.sessionStorage.username;
             if(username){
                 $('.toLogin').html('');
@@ -24,6 +25,8 @@ var showData = (function(){
                     $('.car_login').css('display','none');
                 })
             }
+        },
+        header(){
             $('.car_login').on('mouseenter',function(){
                 $('.car_login').css('display','block');
             })
@@ -50,9 +53,6 @@ var showData = (function(){
             })
             $('.header_seach').click(function(event){
                 event.stopPropagation();
-            })
-            $('.toLogin').click(function(){
-                window.location.href = 'html/login.html' ;    
             })
         },
         expandImg(){

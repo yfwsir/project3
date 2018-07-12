@@ -4,6 +4,7 @@ var showList = (function(){
     var sum =0;
     return {
         init(){
+            this.check();
             this.header();
             this.insertData(shopList) ;
             this.events();
@@ -13,7 +14,7 @@ var showList = (function(){
             })
             $('.total_price').html(sum)
         },
-        header(){
+        check(){
             var username = window.sessionStorage.username;
             if(username){
                 $('.toLogin').html('');
@@ -28,6 +29,8 @@ var showList = (function(){
                     $('.car_login').css('display','none');
                 })
             }
+        },
+        header(){
             $('.car_login').on('mouseenter',function(){
                 $('.car_login').css('display','block');
             })
@@ -55,9 +58,6 @@ var showList = (function(){
             $('.header_seach').click(function(event){
                 event.stopPropagation();
             })
-            $('.toLogin').click(function(){
-                window.location.href = 'html/login.html' ;    
-            })           
         },
         insertData(shopList){
             str = '' ;
