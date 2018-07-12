@@ -115,7 +115,7 @@ var login = (function(){
                             if(json.code == 0){
                                 // console.log(json.data.username)
                                 window.sessionStorage.setItem("username", json.data.username);
-                                window.location.href = '../index.html' ;
+                                window.location.href = '../login.html' ;
                             }else{
                                 alert(json.msg);
                             }

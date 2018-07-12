@@ -154,7 +154,11 @@ a:hover{
 .swiper .imgbox img{
     display: block;
     width: 1200px;
-    float: left;
+    height: 480px;
+    /* float: left; */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .swiper .uubox{
     position: absolute;
@@ -175,7 +179,7 @@ a:hover{
 .swiper .uubox li.checked{
     opacity: 1;
 }
-.swiper .toLeft{
+/* .swiper .toLeft{
     width: 28px;
     height: 46px;
     background: url(../images/pre.png) no-repeat;
@@ -192,7 +196,7 @@ a:hover{
     top: 217px;
     right: 0px;
     cursor: pointer;
-}
+} */
 .index_product_list{
     width: 220px;
     height: 448px;
