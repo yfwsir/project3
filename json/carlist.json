@@ -1,7 +1,8 @@
 [
     {
         "id" : 0,
-        "img" : "../images/buycar/car_list.jpg",
+        "img1" : "../images/detial/xiyiji1.webp",
+        "img2" : "../images/detial/xiyiji1small.webp",
         "name" : "滚筒洗衣机 9KG变频 除菌洗 大容量 智能操控 MG90V130WDX",
         "int" : "触摸屏设计，操作简单；M-smart智能家居系统，WIFI控制；变频电机，节能静音；除菌洗；银灰色门圈，时尚大气；I-time智能时间控制",
         "color" : "白色",
@@ -11,7 +12,8 @@
     },
     {
         "id" : 1,
-        "img" : "../images/buycar/car_list.jpg",
+        "img1" : "../images/detial/xiyiji3.webp",
+        "img2" : "../images/detial/xiyiji3small.webp",
         "name" : "波轮洗衣机 6KG 除菌洗 智能操控 MB60V130WDX",
         "int" : "操作简单；M-smart智能家居系统；节能静音；除菌洗；银灰色门圈，时尚大气；I-time智能时间控制",
         "color" : "金色",

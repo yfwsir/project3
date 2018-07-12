@@ -1,8 +1,8 @@
 
-$('.uubox li').on('click',function(){
-    $(this).addClass('checked').siblings().removeClass('checked');
-    $('.imgbox').animate({left:-1200 * $(this).index()},500);
-})
+// $('.uubox li').on('click',function(){
+//     $(this).addClass('checked').siblings().removeClass('checked');
+//     $('.imgbox').animate({left:-1200 * $(this).index()},500);
+// })
 
 
 var index = (function(){
@@ -57,9 +57,6 @@ var index = (function(){
             $('.header_seach').click(function(event){
                 event.stopPropagation();
             })
-            // $('.toLogin').click(function(){
-            //     window.location.href = 'html/login.html' ;    
-            // })
         },
         banner(){
             $('.list_first').on('mouseenter',function(){

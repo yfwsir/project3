@@ -4,6 +4,7 @@ var showList = (function(){
     var sum =0;
     return {
         init(){
+            this.header();
             this.insertData(shopList) ;
             this.events();
             $('.item_total').each(function(index,item){
@@ -11,6 +12,52 @@ var showList = (function(){
                 return sum
             })
             $('.total_price').html(sum)
+        },
+        header(){
+            var username = window.sessionStorage.username;
+            if(username){
+                $('.toLogin').html('');
+                $('.toLogin').html(username);
+            }else {
+                $('.toLogin').html('');
+                $('.toLogin').html('登录');
+                $('.header_right li').eq(1).on('mouseenter',function(){
+                    $('.car_login').css('display','block');
+                })
+                $('.header_right li').eq(1).on('mouseleave',function(){
+                    $('.car_login').css('display','none');
+                })
+            }
+            $('.car_login').on('mouseenter',function(){
+                $('.car_login').css('display','block');
+            })
+            $('.car_login').on('mouseleave',function(){
+                $('.car_login').css('display','none');
+            })
+            $('.header_right li').eq(2).on('mouseenter',function(){
+                $('.appscan').css('display','block');
+            })
+            $('.header_right li').eq(2).on('mouseleave',function(){
+                $('.appscan').css('display','none');
+            })
+            $('.appscan').on('mouseenter',function(){
+                $('.appscan').css('display','block');
+            })
+            $('.appscan').on('mouseleave',function(){
+                $('.appscan').css('display','none');
+            })
+            $('.header_right li').eq(3).on('mouseenter',function(){
+                $('.header_seach').css('display','block');
+            })
+            $('body').click(function(){
+                $('.header_seach').css('display','none');
+            })
+            $('.header_seach').click(function(event){
+                event.stopPropagation();
+            })
+            $('.toLogin').click(function(){
+                window.location.href = 'html/login.html' ;    
+            })           
         },
         insertData(shopList){
             str = '' ;
@@ -20,8 +67,8 @@ var showList = (function(){
                 <input type="checkbox" class="car_choose">
             </li>
             <li>
-                <img src="../images/buycar/car_list.jpg" alt="">
-                <a href="../html/detial.html">${shopList[i].name}</a>
+                <img src="${shopList[i].listimg}" alt="">
+                <a href="../html/detial.html?id=${shopList[i].id}">${shopList[i].name}</a>
             </li>
             <li>
                 <p>${shopList[i].color}</p>
@@ -90,6 +137,12 @@ var showList = (function(){
                 shopList.splice(ul.index(), 1);
                 localStorage.shopList = JSON.stringify(shopList);
                 ul.remove();
+                sum = 0 ;
+                $('.item_total').each(function(index,item){
+                    sum += Number($(item).html())
+                    return sum
+                })
+                $('.total_price').html(sum)
             })
         }
     }

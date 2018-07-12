@@ -77,6 +77,49 @@ html,body{
 .header ol span{
     color: white;
 }
+.header .car_login{
+    text-align: center;
+    width: 360px;
+    padding: 20px 0;
+    line-height: 44px;
+    background: white;
+    position: absolute;
+    right: 86px;
+    top: 44px;
+    z-index: 5;
+    font-size: 12px;
+    display: none;
+}
+.header .car_login a{
+    color: #0092d8;
+}
+.header .appscan{
+    position: absolute;
+    top: 44px;
+    right: 86px;
+    z-index: 4;
+    display: none;
+}
+.header_seach{
+    width: 240px;
+    position: absolute;
+    top: 0;
+    right: 216px;
+    height: 44px;
+    line-height: 44px;
+    background: white;
+    padding-left: 10px;
+    display: none;
+}
+.header_seach input{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+.header_seach .icon-serch{
+    cursor: pointer;
+    color: #666;
+}
 /* ================公告样式================ */
 .announce{
     text-align: center;

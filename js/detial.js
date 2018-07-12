@@ -146,6 +146,9 @@ var showData = (function(){
                 </div>
             </div>`
             $('.product_right_insert').html(div);
+            $('.expandimg').attr('src',json[id].img1)
+            $('.showBigImgexpand').attr('src',json[id].img1)
+            $('.showImgsmall').attr('src',json[id].img2)
         },
         addshop(obj){
             var shopList = localStorage.shopList || '[]' ;
@@ -194,8 +197,10 @@ var showData = (function(){
                     color:$('.product_color').html(),
                     weight:$('.product_weight').html(),
                     price:$('.new_price').html(),
-                    count:Number($('.sku_num_total input').val())
+                    count:Number($('.sku_num_total input').val()),
+                    listimg:$('.showImgsmall').attr('src')
                 }
+                console.log(obj)
                 _this.addshop(obj)
             })
         }
